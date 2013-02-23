@@ -127,9 +127,7 @@ class SequentialMapValueImpl extends AbstractMapValue {
              * the method calls java.util.AbstractMap$SimpleImmutableEntry
              * that doesn't exist in Android 2.2 or below.
              */
-            Map.Entry<Value, Value> pair = hasDefaultImmutableEntry ?
-                new AbstractMap.SimpleImmutableEntry<Value, Value>(key, value) :
-                new PortedImmutableEntry<Value, Value>(key, value);
+            Map.Entry<Value, Value> pair = new PortedImmutableEntry<Value, Value>(key, value);
 
             pos += 2;
             return pair;
