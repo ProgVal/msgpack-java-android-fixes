@@ -9,3 +9,7 @@ target
 .DS_Store
 build
 lib
+bin/
+gen/
+res/
+local.properties
